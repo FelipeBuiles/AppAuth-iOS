@@ -221,6 +221,7 @@ NSString *const OIDOAuthorizationRequestCodeChallengeMethodS256 = @"S256";
   NSURL *redirectURL = [aDecoder decodeObjectOfClass:[NSURL class] forKey:kRedirectURLKey];
   NSString *state = [aDecoder decodeObjectOfClass:[NSString class] forKey:kStateKey];
   NSString *nonce = [aDecoder decodeObjectOfClass:[NSString class] forKey:kNonceKey];
+  NSLog(@"nonce value at init: %@", nonce);
   NSString *codeVerifier = [aDecoder decodeObjectOfClass:[NSString class] forKey:kCodeVerifierKey];
   NSString *codeChallenge =
       [aDecoder decodeObjectOfClass:[NSString class] forKey:kCodeChallengeKey];

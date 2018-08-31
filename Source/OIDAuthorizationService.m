@@ -483,6 +483,7 @@ NS_ASSUME_NONNULL_BEGIN
         // OpenID Connect Core Section 3.1.3.7. rule #11
         // Validates the nonce.
         NSString *nonce = authorizationResponse.request.nonce;
+        NSLog(@nonce);
         if (nonce && ![idToken.nonce isEqual:nonce]) {
           NSError *invalidIDToken =
           [OIDErrorUtilities errorWithCode:OIDErrorCodeIDTokenFailedValidationError
